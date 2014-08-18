@@ -1,5 +1,5 @@
 FROM  phusion/baseimage
-ADD . ~/registry-deploy
+ADD . /root/registry-deploy
 RUN /usr/sbin/enable_insecure_key
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends git maven curl tomcat7 openjdk-7-jdk
