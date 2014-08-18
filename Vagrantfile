@@ -50,7 +50,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provider "docker" do |d|
-    d.build_dir = "./docker"
+    d.build_dir = "."
     d.has_ssh = true
     d.create_args =  ["--privileged"]
     d.ports =  ["80:8080"]
@@ -58,7 +58,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "docker" do |docker|
     docker.ssh.username = "root"
-    docker.ssh.private_key_path = "./docker/phusion.key"
+    docker.ssh.private_key_path = "phusion.key"
     docker.vm.provision "shell", inline: "service tomcat7 start"
   end
 
