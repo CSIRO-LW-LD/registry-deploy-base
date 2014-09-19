@@ -11,6 +11,7 @@ RUN cp -R ~/registry-deploy/ldregistry/* /opt/ldregistry
 RUN cat ~/registry-deploy/install/nginx.logrotate.conf >> /etc/logrotate.conf
 RUN cp ~/registry-deploy/install/nginx.conf /etc/nginx/conf.d/localhost.conf
 RUN cp ~/registry-deploy/install/sudoers.conf /etc/sudoers.d/ldregistry
+RUN find /opt/ldregistry/ -type f -exec sed -i 's/Environment Registry/CSIRO Test Registry/g' {} \;
 RUN rm -rf /var/lib/tomcat7/webapps/* 
 RUN chown -R tomcat7 /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry
 RUN cp registry-core-0.0.5.war /var/lib/tomcat7/webapps/ROOT.war

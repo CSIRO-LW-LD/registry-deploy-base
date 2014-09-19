@@ -18,7 +18,7 @@ make sure the phusion.key file is owned by root
 run
 
 ```
-sudo vagrant up --provider=docker
+sudo vagrant up --provider=docker docker
 ```
 
 or
@@ -30,5 +30,5 @@ sudo ./vagrantup.sh
 for extra debug info run
 
 ```
-sudo VAGRANT_LOG=debug vagrant up --provider=docker
+sudo VAGRANT_LOG=debug vagrant up --provider=docker docker
 ```
