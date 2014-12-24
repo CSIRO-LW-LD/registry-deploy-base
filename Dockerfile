@@ -14,7 +14,16 @@ RUN cp ~/registry-deploy/install/sudoers.conf /etc/sudoers.d/ldregistry
 RUN rm -rf /var/lib/tomcat7/webapps/* 
 RUN chown -R tomcat7 /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry
 RUN cp registry-core-0.0.5.war /var/lib/tomcat7/webapps/ROOT.war
-CMD ["/sbin/my_init"]
+RUN rm /etc/nginx/sites-available/default 
+
+#supervisord
+RUN apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+
+CMD ["/usr/bin/supervisord"]
+
 EXPOSE 22
 EXPOSE 8080
 EXPOSE 80
