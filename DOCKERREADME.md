@@ -7,28 +7,18 @@ Sets up and runs the linked data registry on a host machine (running Ubuntu) usi
 ## Prerequistes
 
 - Ubuntu >14.04 64bit
-- Docker >1.0 
-- Vagrant >1.6.3
+- Docker >1.0  (see https://docs.docker.com/installation/)
 
 
 ## Instructions
 
-make sure the phusion.key file is owned by root
-
-run
+1. Run the docker build process
 
 ```
-sudo vagrant up --provider=docker
+$ docker build -t registry .
 ```
 
-or
-
+2. Perform the docker run to deploy
 ```
-sudo ./vagrantup.sh
-```
-
-for extra debug info run
-
-```
-sudo VAGRANT_LOG=debug vagrant up --provider=docker
+$ docker run --privileged -d -p 80:8080 -p 2222:22 registry
 ```
