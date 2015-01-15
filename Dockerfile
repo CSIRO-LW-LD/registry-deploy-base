@@ -8,6 +8,7 @@ RUN sysv-rc-conf nginx on
 RUN mkdir -p /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry /var/opt/nginx/cache
 RUN wget https://s3-eu-west-1.amazonaws.com/ukgovld/release/com/github/ukgovld/registry-core/0.0.5/registry-core-0.0.5.war
 RUN cp -R ~/registry-deploy/ldregistry/* /opt/ldregistry
+RUN cp  ~/registry-deploy/proxy-redirectError.conf /var/opt/ldregistry
 RUN cat ~/registry-deploy/install/nginx.logrotate.conf >> /etc/logrotate.conf
 RUN cp ~/registry-deploy/install/nginx.conf /etc/nginx/conf.d/localhost.conf
 RUN cp ~/registry-deploy/install/sudoers.conf /etc/sudoers.d/ldregistry
