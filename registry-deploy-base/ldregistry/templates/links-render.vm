@@ -1,0 +1,186 @@
+## partial to render links from an entity
+##     $entity the entity being rendered
+
+## List the link templates we know about
+## TODO lift into a macro
+
+#*
+Changes finalized on Jan 27th, 2015
+ @author Fabrizio 
+Please note: The code below the block separated by comment blocks was added in to include extra links where available
+## TODO create a macro to clean up the code
+*#
+
+<h2>Links</h2>
+
+#######################################################################
+
+#set($response=$registry.perform("Read","system/links?_view=with_metadata&status=any", $requestor))
+#if($response.status == 404 || $response.status >= 500)
+  <div class="alert alert-danger">Problem accessing system/links register</div>
+#else
+  #set($started=false)
+  #set($model=$response.entity)
+  #set($target="$registry.baseURI/system/links")
+  #set($node=$model.getNode($target))
+  #foreach($linkTemplate in $node.connectedNodes("rdfs:member"))
+
+    #set($path = $linkTemplate.getPropertyValue("ui:path").lexicalForm)
+    #set($links = $entity.connectedNodes($path))
+
+    #if(!$links.isEmpty())
+      #set($started=true)
+      <h4>$linkTemplate.name</h4>
+      <ul>
+        #foreach($link in $links)
+          <li>#linkfor($link)</li>
+       #end
+      </ul>
+    #end
+
+  #end
+
+ #end
+#########################################################################
+
+
+#if($entity.getPropertyValue("skos:broaderTransitive"))
+      #set($started=true)
+  <h4>Broader transitive concepts</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:broaderTransitive"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:inScheme"))
+      #set($started=true) 
+ 	<h4>In scheme</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:inScheme"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:narrowerTransitive"))
+      #set($started=true)
+  <h4>Narrower transitive concepts</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:narrowerTransitive"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:semanticRelation"))
+      #set($started=true)
+  <h4>Semantic relation</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:semanticRelation"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:mappingRelation"))
+      #set($started=true)
+  <h4>skos:mapping relation</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:mappingRelation"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:relatedMatch"))
+      #set($started=true)
+  <h4>Related match</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:relatedMatch"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+#if($entity.getPropertyValue("skos:exactMatch"))
+      #set($started=true)
+  <h4>Exact match</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:exactMatch"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("skos:closeMatch"))
+      #set($started=true)
+  <h4>Close match</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:closeMatch"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("skos:narrowMatch"))
+      #set($started=true)
+  <h4>Narrow match</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:narrowMatch"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("skos:broadMatch"))
+      #set($started=true)
+  <h4>Broad match</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("skos:broadMatch"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("owl:sameAs"))
+      #set($started=true)
+  <h4>Same as</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("owl:sameAs"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("rdfs:seeAlso"))
+      #set($started=true)
+  <h4>See also</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("rdfs:seeAlso"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("dct:isReplacedBy"))
+      #set($started=true)
+  <h4>Is replaced by</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("dct:isReplacedBy"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+#if($entity.getPropertyValue("dct:replaces"))
+      #set($started=true)
+  <h4>Replaces</h4>
+  <ul>
+    #foreach($r in $entity.listPropertyValues("dct:replaces"))
+      <li>#linkfor($r)</li>
+    #end
+  </ul>
+#end
+
+### Will display an error message when no links are found.
+
+  #if(!$started)
+     <p>.. none found</p>
+  #end
+
+

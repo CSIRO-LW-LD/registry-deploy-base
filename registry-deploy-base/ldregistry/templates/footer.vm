@@ -1,0 +1,43 @@
+      <footer>
+        <div class="pull-right">Developed by <a href="http://www.epimorphics.com/">Epimorphics Ltd</a></div>
+    
+#if($entity.getPropertyValue("rdfs:seeAlso"))
+ <p> See also : 
+    #foreach($r in $entity.listPropertyValues("rdfs:seeAlso"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:source"))
+ <p> Source : 
+    #foreach($r in $entity.listPropertyValues("dct:source"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:license"))
+ <p> License : 
+    #foreach($r in $entity.listPropertyValues("dct:license"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:rights"))
+ <p> Rights :
+    #foreach($r in $entity.listPropertyValues("dct:rights"))
+      #linkfor($r)
+    #end
+#end
+
+	</p>
+	 </footer>
+    </div> <!-- End of container -->
+
+    <script type="text/javascript" src="$uiroot/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="$uiroot/js/jquery.dataTables.min.js"></script>
+    <script src="$uiroot/js/bootstrap-editable.min.js"></script>
+    <script type="text/javascript" src="$uiroot/js/ui.js"></script>
+    #if($extraJS)
+      #foreach($file in $extraJS.split(","))
+        <script type="text/javascript" src="$uiroot/js/$file"></script>
+      #end
+    #end
+  </body>
+</html>
