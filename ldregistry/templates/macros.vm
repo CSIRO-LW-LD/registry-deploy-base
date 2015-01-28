@@ -89,7 +89,7 @@
 ## Display a set of property/value pairs in the RDF browser
 #macro(restable $res $classes)
   <table class="table $classes">
-##    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+ ##   <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       #foreach($pv in $res.listProperties())
         <tr>
@@ -114,6 +114,11 @@
   </table>
 
 #end
+
+
+
+
+
 
 ## Conditional row in a metadata table
 #macro(metadatarow $label $values)

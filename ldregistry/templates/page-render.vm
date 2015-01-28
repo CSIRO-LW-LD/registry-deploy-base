@@ -22,10 +22,22 @@
   <div id="description" class="col-md-10">
     <h2>#if($register)Register: #{else}Entry: #end $entity.name #if($versionNumber)- showing version $versionNumber#end</h2>
     <p>  <strong>URI:</strong> <a href="#linkhref($entity)" title="$entity.uRI">$entity.uRI</a> </p>
-    <p> #description($entity, "<p><em>no description supplied</em></p>") </p>
-  </div>
+    <p>
+	#if($entity.getPropertyValue("rdf:type"))
+		<strong>type:</strong>
+    		#foreach($r in $entity.listPropertyValues("rdf:type"))
+       		| #linkfor($r)
+    		#end
+		|
+	#end
+    </p>
+
+    <p> #description($entity, "<p><em>no description supplied</em></p>") 
+		<p> </p>
+		<p> </p>
+ </div>
   <div id="metadata-pane" class="col-md-5 hide">
-    <div class="tab-content" id="metadata-content">
+   <div class="tab-content" id="metadata-content">
       <div class="tab-pane" id="detailsTab">
         <h3 class="text-center">Core metadata</h3>
         <table class="table table-condensed">
@@ -120,8 +132,8 @@
   		<h2>Definition</h2>
   		#if($template)
           #parse($template)
-  		#else
-  		  #restable($entity, "table-striped table-condensed table-bordered")
+			#else
+		#restable($entity, "table-striped table-condensed table-bordered")
   		#end
   	</div>
     <div class="col-md-offset-1 col-md-5">

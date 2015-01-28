@@ -1,6 +1,33 @@
       <footer>
         <div class="pull-right">Developed by <a href="http://www.epimorphics.com/">Epimorphics Ltd</a></div>
-      </footer>
+    
+#if($entity.getPropertyValue("rdfs:seeAlso"))
+ <p> See also : 
+    #foreach($r in $entity.listPropertyValues("rdfs:seeAlso"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:source"))
+ <p> Source : 
+    #foreach($r in $entity.listPropertyValues("dct:source"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:license"))
+ <p> License : 
+    #foreach($r in $entity.listPropertyValues("dct:license"))
+      #linkfor($r)
+    #end
+#end
+#if($entity.getPropertyValue("dct:rights"))
+ <p> Rights :
+    #foreach($r in $entity.listPropertyValues("dct:rights"))
+      #linkfor($r)
+    #end
+#end
+
+	</p>
+	 </footer>
     </div> <!-- End of container -->
 
     <script type="text/javascript" src="$uiroot/js/bootstrap.min.js"></script>
