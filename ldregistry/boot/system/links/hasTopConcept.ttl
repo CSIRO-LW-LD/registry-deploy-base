@@ -12,5 +12,5 @@
 <hasTopConcept> a ui:PathTemplate;
     rdfs:label "Has top concept"@en;
     dct:description "UI template for finding inverse skos:topConceptOf links"@en;
-    ui:path "^skos:topConceptOf";
+    ui:path "skos:topConceptOf";
     .
