@@ -10,9 +10,9 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 
-<concept-extended> a ui:FormTemplate;
-    rdfs:label "ExtendedConcept"@en;
-    ui:tooltip "Define a single skos:Concept, with relations and notes"@en;
+<concept-with-mappings-and-notes> a ui:FormTemplate;
+    rdfs:label "ConceptWithMappings"@en;
+    ui:tooltip "Define a single skos:Concept, including mapping relations and notes"@en;
     ui:prototype [a skos:Concept];
     ui:formFields (
       [a ui:FormField; rdfs:label "id"; skos:notation "id";
@@ -25,12 +25,16 @@
             ui:property rdfs:label;
             ui:required true ;
             ui:fieldType ui:labelField ]
+      [a ui:FormField; rdfs:label "preferred label"; skos:notation "prefLabel";
+            ui:tooltip "Preferred label for the concept - only one per language"@en;
+            ui:property skos:prefLabel;
+            ui:fieldType ui:labelField]
       [a ui:FormField; rdfs:label "alternative label"; skos:notation "altLabel";
             ui:tooltip "Alternative label for the concept"@en;
             ui:property skos:altLabel;
             ui:fieldType ui:labelField]
-      [a ui:FormField; rdfs:label "notation, code or symbol"; skos:notation "notation";
-            ui:tooltip "Optional skos:notation"@en;
+      [a ui:FormField; rdfs:label "acronym, code or symbol"; skos:notation "notation";
+            ui:tooltip "Code, serial number or acronym for the concept"@en;
             ui:property skos:notation;
             ui:fieldType ui:labelField]
       [a ui:FormField; rdfs:label "description or definition"; skos:notation "description";
