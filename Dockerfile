@@ -17,6 +17,7 @@ RUN rm -rf /var/lib/tomcat7/webapps/*
 RUN chown -R tomcat7 /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry
 RUN cp registry-core-0.0.5.war /var/lib/tomcat7/webapps/ROOT.war
 RUN rm /etc/nginx/sites-available/default 
+RUN rm -f /etc/service/sshd/down
 
 #supervisord
 RUN apt-get install -y supervisor
