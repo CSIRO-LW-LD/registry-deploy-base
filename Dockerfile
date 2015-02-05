@@ -18,6 +18,10 @@ RUN chown -R tomcat7 /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry
 RUN cp registry-core-0.0.5.war /var/lib/tomcat7/webapps/ROOT.war
 RUN rm /etc/nginx/sites-available/default 
 RUN rm -f /etc/service/sshd/down
+# Regenerate SSH host keys. baseimage-docker does not contain any, so you
+# have to do that yourself. You may also comment out this instruction; the
+# init system will auto-generate one during boot.
+RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 #supervisord
 RUN apt-get install -y supervisor
