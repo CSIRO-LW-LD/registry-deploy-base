@@ -20,5 +20,25 @@ $ docker build -t registry .
 
 2. Perform the docker run to deploy
 ```
-$ docker run --privileged -d -p 80:8080 -p 2222:22 registry
+$ docker run --privileged --enable-insecure-key -d -p 80:8080 -p 2222:22 registry
 ```
+
+3. SSH into the container
+
+The docker build automatically genereates ssh keys as per https://github.com/phusion/baseimage-docker#login_ssh
+```
+$ docker ps
+$ docker inspect -f "{{ .NetworkSettings.IPAddress }}" <ID>
+
+# Download the insecure private key
+curl -o insecure_key -fSL https://github.com/phusion/baseimage-docker/raw/master/image/insecure_key
+chmod 600 insecure_key
+
+# Login to the container
+ssh -i insecure_key root@<IP address>
+
+# Running a command inside the container
+ssh -i insecure_key root@<IP address> echo hello world
+```
+
+
