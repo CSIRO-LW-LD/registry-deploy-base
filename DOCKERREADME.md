@@ -1,10 +1,10 @@
-Linked Data Registry Vagrant Docker Installation
-================================================
+Linked Data Registry Docker Installation
+========================================
 
 
-Sets up and runs the linked data registry on a host machine (running Ubuntu) using Vagrant and Docker. Vagrant builds a docker image from the Dockerfile. Vagrant provisions a docker container created from this image and starts tomcat. Port 8080 is mapped to port 80 on the host machine in the Vagrantfile. 
+Sets up and runs the linked data registry on a host machine (running Ubuntu or equivalent linux os) using Docker. 
 
-## Prerequistes
+## Prerequisites
 
 - Ubuntu >14.04 64bit
 - Docker >1.4.0  (see https://docs.docker.com/installation/)
