@@ -7,7 +7,7 @@ Sets up and runs the linked data registry on a host machine (running Ubuntu) usi
 ## Prerequistes
 
 - Ubuntu >14.04 64bit
-- Docker >1.0  (see https://docs.docker.com/installation/)
+- Docker >1.4.0  (see https://docs.docker.com/installation/)
 
 
 ## Instructions
@@ -26,4 +26,5 @@ registry should be running on http://localhost:8080
 
 3. SSH into the container
 
-The docker build automatically genereates ssh keys as per https://github.com/phusion/baseimage-docker#login_ssh
+The docker build automatically generates ssh keys as per https://github.com/phusion/baseimage-docker#login_ssh
+
