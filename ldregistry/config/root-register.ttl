@@ -21,8 +21,8 @@
     version:currentVersion <>;
     rdfs:label "root"@en;
     dct:description "The root register"@en;
-    reg:owner      <http://people.csiro.au/C/S/Simon-Cox> ;
-    reg:manager   <http://people.csiro.au/C/S/Simon-Cox> ;
+    reg:owner      <mailto:oliver.raymond@ga.gov.au> ;
+    reg:manager   <mailto:oliver.raymond@ga.gov.au> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;
 .
