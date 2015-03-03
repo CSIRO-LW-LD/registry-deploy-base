@@ -45,5 +45,13 @@
             ui:tooltip "Has broader concept (recommended if known)."@en;
             ui:property skos:broader;
             ui:fieldType ui:anyURIField]
+      [a ui:FormField; rdfs:label "source of definition (as text)"; skos:notation "source";
+            ui:tooltip "Source of definition (text citation)"@en;
+            ui:property dct:source;
+            ui:fieldType ui:textField]
+      [a ui:FormField; rdfs:label "authority for definition (as a link)"; skos:notation "isDefinedBy";
+            ui:tooltip "Authority for definition (URI link)"@en;
+            ui:property rdfs:isDefinedBy;
+            ui:fieldType ui:anyURIField]
     );
     .
