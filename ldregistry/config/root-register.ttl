@@ -15,14 +15,14 @@
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
 
-@base <http://wirada-01.bom.gov.au/registry/> .
+@base <http://environment.data.gov.au/def/> .
 
 <> a reg:Register;
     version:currentVersion <>;
     rdfs:label "root"@en;
     dct:description "The root register"@en;
-    reg:owner      <mailto:d.lowe@bom.gov.au> ;
-    reg:manager   <mailto:d.lowe@bom.gov.au> ;
+    reg:owner      <mailto:nicholas.car@csiro.au> ;
+    reg:manager   <mailto:nicholas.car@csiro.au> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;
 .
