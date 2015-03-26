@@ -1,5 +1,6 @@
       <footer>
         <div class="pull-right">Developed by <a href="http://www.epimorphics.com/">Epimorphics Ltd</a></div>
+        <div class="pull-right">Customised by <a href="http://www.csiro.au/">CSIRO Australia</a></div>
     
 #if($entity.getPropertyValue("rdfs:seeAlso"))
  <p> See also : 
@@ -10,7 +11,7 @@
 #if($entity.getPropertyValue("dct:source"))
  <p> Source : 
     #foreach($r in $entity.listPropertyValues("dct:source"))
-      #linkfor($r)
+      #render($r)
     #end
 #end
 #if($entity.getPropertyValue("dct:license"))
@@ -22,7 +23,7 @@
 #if($entity.getPropertyValue("dct:rights"))
  <p> Rights :
     #foreach($r in $entity.listPropertyValues("dct:rights"))
-      #linkfor($r)
+      #render($r)
     #end
 #end
 
