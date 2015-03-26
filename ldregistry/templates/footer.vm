@@ -1,6 +1,6 @@
       <footer>
-        <div class="pull-right">Developed by <a href="http://www.epimorphics.com/">Epimorphics Ltd</a>
-        <br/>Customised by <a href="http://www.csiro.au/">CSIRO Australia</a></div>
+        <div class="pull-right">Developed by <a href="http://www.epimorphics.com/">Epimorphics Ltd</a><br/>
+        Customised by <a href="http://www.csiro.au/">CSIRO Australia</a></div>
     
 #if($entity.getPropertyValue("rdfs:seeAlso"))
  <p> See also : 
