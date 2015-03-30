@@ -18,9 +18,9 @@
 @prefix ex-org:  <http://registry.example.org/structure/org/> .
 @prefix ex-entity:  <http://registry.example.org/structure/entity-type/> .
 
-<ui> a reg:Register;
-    rdfs:label "UI"@en;
-    dct:description "Codes and concepts used to guide the presentation of the registry user interface."@en;
+<category> a reg:Register;
+    rdfs:label "Categories"@en;
+    dct:description "Codes used to classify collections in the registry"@en;
     reg:owner     ex-org:ex-org ;
     reg:category  ex-cat:System;
     ex-ui:entityType  ex-entity:Abstract;
