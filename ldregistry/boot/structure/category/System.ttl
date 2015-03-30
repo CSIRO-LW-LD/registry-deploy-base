@@ -24,7 +24,7 @@
 @prefix cc:    <http://creativecommons.org/ns#> .
 @prefix ldp:   <http://www.w3.org/ns/ldp#> .
 
-<http://environment.data.gov.uk/registry/structure/category/System>
+<http://www.opengis.net/structure/category/System>
         a                skos:Concept ;
         rdfs:label       "System" ;
         dct:description  "Codes related to internal operation of the registry itself" ;

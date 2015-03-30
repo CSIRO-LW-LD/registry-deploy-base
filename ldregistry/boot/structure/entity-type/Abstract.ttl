@@ -24,7 +24,7 @@
 @prefix cc:    <http://creativecommons.org/ns#> .
 @prefix ldp:   <http://www.w3.org/ns/ldp#> .
 
-http://www.opengis.net/structure/entity-type/Abstract>
+<http://www.opengis.net/structure/entity-type/Abstract>
         a                skos:Concept ;
         rdfs:label       "Abstract" ;
         dct:description  "Code lists used for abstract things including for internal registry operation" ;
