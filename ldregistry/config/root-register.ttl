@@ -12,6 +12,7 @@
 @prefix vs:   <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ogc-org:  <http://www.opengis.net/structure/org/> .
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
 
@@ -20,9 +21,9 @@
 <> a reg:Register;
     version:currentVersion <>;
     rdfs:label "root"@en;
-    dct:description "The root register"@en;
-    reg:owner      <http://people.csiro.au/C/S/Simon-Cox> ;
-    reg:manager   <http://people.csiro.au/C/S/Simon-Cox> ;
+    dct:description "The OGC registry - root register"@en;
+    reg:owner      ogc-org:open-geospatial-consortium ;
+    reg:manager   <mailto:ogc-na@lists.opengeospatial.org> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;
 .
