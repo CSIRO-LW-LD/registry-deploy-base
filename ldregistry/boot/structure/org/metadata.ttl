@@ -19,7 +19,7 @@
 @prefix ogc-entity:  <http://www.opengis.net/structure/entity-type/> .
 
 <org> a reg:Register;
-    rdfs:label "UI"@en;
+    rdfs:label "Organizations"@en;
     dct:description "Organizations known to this registry"@en;
     reg:owner     ogc-org:open-geospatial-consortium ;
     reg:category  ogc-cat:System;
