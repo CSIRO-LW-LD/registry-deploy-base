@@ -7,15 +7,13 @@
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
 @prefix facet:   <http://www.epimorphics.com/ontologies/facet#> .
-@prefix ex-org:      <http://registry.example.org/structure/org/> .
+@prefix rr-org:      <http://registry.example.org/structure/org/> .
 
-ex-org:ex-org 
+rr-org:ex-org 
     a                         reg:NamespaceForward;
     rdfs:label                "Example Organization"@en;
     dct:description          "Register item that redirects to example organization website"@en ;
     reg:delegationTarget      <http://www.example.org> ;
     reg:forwardingCode        "307" ;
-    reg:notation              "ex-org" ;
+    reg:notation              "rr-org" ;
     .
-
-
