@@ -18,9 +18,9 @@
 @prefix ogc-org:  <http://www.opengis.net/structure/org/> .
 @prefix ogc-entity:  <http://www.opengis.net/structure/entity-type/> .
 
-<ui> a reg:Register;
-    rdfs:label "UI"@en;
-    dct:description "Codes and concepts used to guide the presentation of the registry user interface."@en;
+<category> a reg:Register;
+    rdfs:label "Categories"@en;
+    dct:description "Codes used to classify collections in the registry"@en;
     reg:owner     ogc-org:open-geospatial-consortium ;
     reg:category  ogc-cat:System;
     ogc-ui:entityType  ogc-entity:Abstract;

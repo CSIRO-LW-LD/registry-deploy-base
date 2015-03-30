@@ -31,7 +31,7 @@
 <_> a reg:RegisterItem;
     version:currentVersion <_>;
     rdfs:label "root"@en;
-    dct:description "The root register"@en;
+    dct:description "The OGC registry - root register"@en;
     reg:status reg:statusStable;
     reg:itemClass reg:Register;
     reg:notation "";

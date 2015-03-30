@@ -18,8 +18,8 @@
 @prefix ogc-org:  <http://www.opengis.net/structure/org/> .
 @prefix ogc-entity:  <http://www.opengis.net/structure/entity-type/> .
 
-<def> a reg:Register;
-    rdfs:label "Definitions"@en;
+<spec> a reg:Register;
+    rdfs:label "Specifications"@en;
     dct:description "OGC Specifications"@dn ;
     reg:containedItemClass reg:Register;
     reg:owner     ogc-org:open-geospatial-consortium ;
