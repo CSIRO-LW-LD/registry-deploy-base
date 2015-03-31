@@ -4,10 +4,7 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Linked Data Registry</h1>
-        <a href="http://www.example.org">
-            <img class="float-right"  src="/ui/img/Untitled.png" alt="Example Organization" name="logoEX" height="144" border="5"></img>
-        </a>
+        <h1>Linked Data Registry <a href="http://www.example.org"><img class="pull-right" src="/ui/img/Untitled.png" alt="Example Organization" name="logoEX" height="100" border="5"></img></a></h1>
       </div>
     </div>
     <div class="container">
