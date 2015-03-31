@@ -1,6 +1,6 @@
 # registry-deploy-env
 
-Provides configuration, UI templates and bootstraping for the Environment Registry.
+Provides configuration, UI templates and bootstrapping for a Linked Data Registry deployment.
 
 This is a manual fork of UKGovLD/registry-deploy-poc
 
