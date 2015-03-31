@@ -13,7 +13,7 @@
         <p>It is based on the UKGovLD <a href="https://github.com/UKGovLD/ukl-registry-poc/wiki">proof-of-concept design</a> for a Linked Data registry.</p>
       </div>
       <div class="row">
-        <p>For more information, <a href="mailto:register.owner@example.org}">email us</a>.</p>
+        <p>For more information, <a href="mailto:register.owner@example.org">email us</a>.</p>
       </div>
 
     ## container will be closed by footer
