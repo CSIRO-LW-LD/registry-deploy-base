@@ -12,29 +12,16 @@
 @prefix vs:   <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
 @prefix reg:  <http://purl.org/linked-data/registry#> .
+@prefix rr-ui:  <http://registry.example.org/structure/ui/> .
+@prefix rr-cat:  <http://registry.example.org/structure/category/> .
 @prefix rr-org:  <http://registry.example.org/structure/org/> .
+@prefix rr-entity:  <http://registry.example.org/structure/entity-type/> .
 
-@base <http://registry.example.org/> .
-
-<> a reg:Register;
-    version:currentVersion <>;
-    rdfs:label "root"@en;
-    dct:description "The root register"@en;
-    reg:owner      rr-org:ex-org ;
-    reg:manager   <mailto:registry.manager@example.org> ;
-    reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
-    owl:versionInfo 1;
-.
-
-<_> a reg:RegisterItem;
-    version:currentVersion <_>;
-    rdfs:label "root"@en;
-    dct:description "The root register"@en;
-    reg:status reg:statusStable;
-    reg:itemClass reg:Register;
-    reg:notation "";
-    reg:definition [ reg:entity <> ];
-.
-
+<entity-type> a reg:Register;
+    rdfs:label "Entity types"@en;
+    dct:description "Codes used to describe the type of entity that a code list is used for."@en;
+    reg:owner     rr-org:ex-org ;
+    reg:category  rr-cat:System;
+    rr-ui:entityType  rr-entity:Abstract;
+    .

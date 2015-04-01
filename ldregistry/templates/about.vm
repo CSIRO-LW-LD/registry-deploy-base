@@ -4,15 +4,18 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Linked Data Registry</h1>
+        <h1>Linked Data Registry <a href="http://www.example.org"><img class="pull-right" src="/ui/img/Untitled.png" alt="Example Organization" name="logoEX" height="100" border="5"></img></a></h1>
       </div>
     </div>
-
     <div class="container">
       <div class="row">
         <p>This is a service to provide management and public access to controlled vocabularies and linked data resources.</p>
         <p>It is based on the UKGovLD <a href="https://github.com/UKGovLD/ukl-registry-poc/wiki">proof-of-concept design</a> for a Linked Data registry.</p>
       </div>
+      <div class="row">
+        <p>For more information, <a href="mailto:register.owner@example.org">email us</a>.</p>
+      </div>
+
     ## container will be closed by footer
 
 #parse("footer.vm")
