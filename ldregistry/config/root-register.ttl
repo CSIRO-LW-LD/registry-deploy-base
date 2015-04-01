@@ -14,16 +14,16 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
-@prefix rr-org:  <http://registry.example.org/structure/org/> .
+@prefix rr-org:  <http://environment.data.gov.au/def/structure/org/> .
 
-@base <http://registry.example.org/> .
+@base <http://environment.data.gov.au/def/> .
 
 <> a reg:Register;
     version:currentVersion <>;
     rdfs:label "root"@en;
     dct:description "The root register"@en;
-    reg:owner      rr-org:ex-org ;
-    reg:manager   <mailto:registry.manager@example.org> ;
+    reg:owner      rr-org:augov ;
+    reg:manager   <mailto:agldwg-all@lists.csiro.au> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;
 .

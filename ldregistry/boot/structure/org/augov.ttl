@@ -7,13 +7,13 @@
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
 @prefix facet:   <http://www.epimorphics.com/ontologies/facet#> .
-@prefix rr-org:      <http://registry.example.org/structure/org/> .
+@prefix rr-org:      <http://environment.data.gov.au/def/structure/org/> .
 
-rr-org:ex-org 
+rr-org:augov 
     a                         reg:NamespaceForward;
-    rdfs:label                "Example Organization"@en;
-    dct:description          "Register item that redirects to example organization website"@en ;
-    reg:delegationTarget      <http://www.example.org> ;
+    rdfs:label                "Australian Government"@en;
+    dct:description           "Register item that redirects to data.gov.au"@en ;
+    reg:delegationTarget      <http://data.gov.au/> ;
     reg:forwardingCode        "307" ;
-    reg:notation              "rr-org" ;
+    reg:notation              "augov" ;
     .
