@@ -22,6 +22,6 @@
     rdfs:label "Specifications"@en;
     dct:description "OGC Specifications"@dn ;
     reg:containedItemClass reg:Register;
-    reg:owner     ogc-org:open-geospatial-consortium ;
+    reg:owner     ogc-org:ogc ;
     reg:category  ogc-cat:System;
     .

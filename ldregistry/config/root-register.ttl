@@ -22,7 +22,7 @@
     version:currentVersion <>;
     rdfs:label "root"@en;
     dct:description "The OGC registry - root register"@en;
-    reg:owner      ogc-org:open-geospatial-consortium ;
+    reg:owner      ogc-org:ogc ;
     reg:manager   <mailto:ogc-na@lists.opengeospatial.org> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;

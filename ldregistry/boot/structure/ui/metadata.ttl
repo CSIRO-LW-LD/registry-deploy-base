@@ -21,7 +21,7 @@
 <ui> a reg:Register;
     rdfs:label "UI"@en;
     dct:description "Codes and concepts used to guide the presentation of the registry user interface."@en;
-    reg:owner     ogc-org:open-geospatial-consortium ;
+    reg:owner     ogc-org:ogc ;
     reg:category  ogc-cat:System;
     ogc-ui:entityType  ogc-entity:Abstract;
     .

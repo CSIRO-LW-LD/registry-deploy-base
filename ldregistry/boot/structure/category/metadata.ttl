@@ -21,7 +21,7 @@
 <category> a reg:Register;
     rdfs:label "Categories"@en;
     dct:description "Codes used to classify collections in the registry"@en;
-    reg:owner     ogc-org:open-geospatial-consortium ;
+    reg:owner     ogc-org:ogc ;
     reg:category  ogc-cat:System;
     ogc-ui:entityType  ogc-entity:Abstract;
     .

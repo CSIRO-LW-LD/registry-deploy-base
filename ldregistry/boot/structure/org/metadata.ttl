@@ -21,7 +21,7 @@
 <org> a reg:Register;
     rdfs:label "Organizations"@en;
     dct:description "Organizations known to this registry"@en;
-    reg:owner     ogc-org:open-geospatial-consortium ;
+    reg:owner     ogc-org:ogc ;
     reg:category  ogc-cat:System;
     ogc-ui:entityType  ogc-entity:Abstract;
     .
