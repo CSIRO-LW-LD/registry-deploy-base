@@ -22,6 +22,6 @@
     rdfs:label "Structure"@en;
     dct:description "Code lists used to aid organizing and presenting the registry contents."@en;
     reg:containedItemClass reg:Register;
-    reg:owner     rr-org:ex-org ;
+    reg:owner     rr-org:augov ;
     reg:category  rr-cat:System;
     .

@@ -21,7 +21,7 @@
 <entity-type> a reg:Register;
     rdfs:label "Entity types"@en;
     dct:description "Codes used to describe the type of entity that a code list is used for."@en;
-    reg:owner     rr-org:ex-org ;
+    reg:owner     rr-org:augov ;
     reg:category  rr-cat:System;
     rr-ui:entityType  rr-entity:Abstract;
     .

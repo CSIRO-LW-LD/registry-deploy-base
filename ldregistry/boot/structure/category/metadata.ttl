@@ -21,7 +21,7 @@
 <category> a reg:Register;
     rdfs:label "Categories"@en;
     dct:description "Codes used to classify collections in the registry"@en;
-    reg:owner     rr-org:ex-org ;
+    reg:owner     rr-org:augov ;
     reg:category  rr-cat:System;
     rr-ui:entityType  rr-entity:Abstract;
     .
