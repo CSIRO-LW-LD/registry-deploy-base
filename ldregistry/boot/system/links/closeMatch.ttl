@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <closeMatch> a ui:PathTemplate;
-    rdfs:label "Has close match"@en;
+    rdfs:label "has close match"@en;
     dct:description "UI template for finding skos:closeMatch links"@en;
     ui:path "skos:closeMatch";
     .

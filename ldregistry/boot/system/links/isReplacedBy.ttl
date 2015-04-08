@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <isReplacedBy> a ui:PathTemplate;
-    rdfs:label "Is replaced by"@en;
+    rdfs:label "is replaced by"@en;
     dct:description "UI template for finding dct:isReplacedBy links"@en;
     ui:path "dct:isReplacedBy";
     .

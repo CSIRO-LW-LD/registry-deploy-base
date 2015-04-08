@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <narrowerTransitive> a ui:PathTemplate;
-    rdfs:label "Has narrower transitive concept"@en;
+    rdfs:label "has narrower transitive concept"@en;
     dct:description "UI template for finding skos:narrowerTransitive links"@en;
     ui:path "skos:narrowerTransitive";
     .

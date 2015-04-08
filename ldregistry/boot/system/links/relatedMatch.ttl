@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <relatedMatch> a ui:PathTemplate;
-    rdfs:label "Related match for"@en;
+    rdfs:label "related match for"@en;
     dct:description "UI template for finding skos:relatedMatch links"@en;
     ui:path "skos:relatedMatch";
     .

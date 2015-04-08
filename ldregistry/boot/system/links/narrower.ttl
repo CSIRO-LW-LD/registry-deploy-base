@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <narrower> a ui:PathTemplate;
-    rdfs:label "Has narrower concept"@en;
+    rdfs:label "has narrower concept"@en;
     dct:description "UI template for finding skos:narrower links"@en;
     ui:path "skos:narrower";
     .

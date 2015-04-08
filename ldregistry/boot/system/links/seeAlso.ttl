@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <seeAlso> a ui:PathTemplate;
-    rdfs:label "See also"@en;
+    rdfs:label "see also"@en;
     dct:description "UI template for finding rdfs:seeAlso links"@en;
     ui:path "rdfs:seeAlso";
     .

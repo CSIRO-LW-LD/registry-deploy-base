@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <narrowMatch> a ui:PathTemplate;
-    rdfs:label "Has narrow match"@en;
+    rdfs:label "has narrow match"@en;
     dct:description "UI template for finding skos:narrowMatch links"@en;
     ui:path "skos:narrowMatch";
     .

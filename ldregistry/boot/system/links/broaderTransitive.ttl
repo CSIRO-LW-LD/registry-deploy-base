@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <broaderTransitive> a ui:PathTemplate;
-    rdfs:label "Has broader transitive concept"@en;
+    rdfs:label "has broader transitive concept"@en;
     dct:description "UI template for finding skos:broaderTransitive links"@en;
     ui:path "skos:broaderTransitive";
     .

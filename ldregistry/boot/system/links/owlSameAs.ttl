@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <sameAs> a ui:PathTemplate;
-    rdfs:label "Is same as"@en;
+    rdfs:label "is same as"@en;
     dct:description "UI template for finding owl:sameAs links"@en;
     ui:path "owl:sameAs";
     .

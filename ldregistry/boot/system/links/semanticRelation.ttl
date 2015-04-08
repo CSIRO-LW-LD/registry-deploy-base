@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <semanticRelation> a ui:PathTemplate;
-    rdfs:label "Is in semantic relation with"@en;
+    rdfs:label "is in semantic relation with"@en;
     dct:description "UI template for finding skos:semanticRelation links"@en;
     ui:path "skos:semanticRelation";
     .

@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <related> a ui:PathTemplate;
-    rdfs:label "Related concept"@en;
+    rdfs:label "related concept"@en;
     dct:description "UI template for finding skos:related links"@en;
     ui:path "skos:related";
     .

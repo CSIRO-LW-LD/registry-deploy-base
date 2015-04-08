@@ -11,7 +11,7 @@
 @prefix org:  <http://www.w3.org/ns/org#> .
 
 <hasSubOrganization> a ui:PathTemplate;
-    rdfs:label "Has sub-organization"@en;
+    rdfs:label "has sub-organization"@en;
     dct:description "UI template for finding org:hasSubOrganization links"@en;
     ui:path "org:hasSubOrganization";
     .

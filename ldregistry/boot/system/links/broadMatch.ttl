@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <broadMatch> a ui:PathTemplate;
-    rdfs:label "Has broad match"@en;
+    rdfs:label "has broad match"@en;
     dct:description "UI template for finding skos:broadMatch links"@en;
     ui:path "skos:broadMatch";
     .

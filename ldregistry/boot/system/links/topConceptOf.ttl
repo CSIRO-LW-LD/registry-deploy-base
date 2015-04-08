@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <topConceptOf> a ui:PathTemplate;
-    rdfs:label "Top concept of"@en;
+    rdfs:label "top concept of"@en;
     dct:description "UI template for finding skos:topConceptOf links"@en;
     ui:path "skos:topConceptOf";
     .

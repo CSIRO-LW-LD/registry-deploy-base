@@ -11,7 +11,7 @@
 @prefix org:  <http://www.w3.org/ns/org#> .
 
 <hasUnit> a ui:PathTemplate;
-    rdfs:label "Has organizational unit"@en;
+    rdfs:label "has organizational unit"@en;
     dct:description "UI template for finding org:hasUnit links"@en;
     ui:path "org:hasUnit";
     .

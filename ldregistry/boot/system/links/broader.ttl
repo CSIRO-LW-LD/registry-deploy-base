@@ -10,7 +10,7 @@
 @prefix ui:   <http://purl.org/linked-data/registry-ui#> .
 
 <broader> a ui:PathTemplate;
-    rdfs:label "Has broader concept"@en;
+    rdfs:label "has broader concept"@en;
     dct:description "UI template for finding skos:broader links"@en;
     ui:path "skos:broader";
     .
