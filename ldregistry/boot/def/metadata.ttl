@@ -21,7 +21,6 @@
 <def> a reg:Register;
     rdfs:label "Definitions"@en;
     dct:description "OGC Definitions and code lists"@dn ;
-    reg:containedItemClass reg:Register;
     reg:owner     ogc-org:ogc ;
     reg:category  ogc-cat:System;
     .
