@@ -44,7 +44,6 @@ COPY supervisord.conf /etc/supervisord.conf
 RUN chmod +x /*.sh
 CMD ["/usr/bin/supervisord"]
 
-EXPOSE 22
 EXPOSE 8080
 EXPOSE 80
 
