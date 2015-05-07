@@ -1,6 +1,7 @@
-FROM  phusion/baseimage
+#FROM  phusion/baseimage
+FROM ubuntu
+ENV HOME /root
 ADD . /root/registry-deploy
-RUN /usr/sbin/enable_insecure_key
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends git maven curl tomcat7 openjdk-7-jdk wget nginx sysv-rc-conf
 RUN sysv-rc-conf tomcat7 on
@@ -12,16 +13,10 @@ RUN cp  ~/registry-deploy/proxy-redirectError.conf /var/opt/ldregistry
 RUN cat ~/registry-deploy/install/nginx.logrotate.conf >> /etc/logrotate.conf
 RUN cp ~/registry-deploy/install/nginx.conf /etc/nginx/conf.d/localhost.conf
 RUN cp ~/registry-deploy/install/sudoers.conf /etc/sudoers.d/ldregistry
-# RUN find /opt/ldregistry/ -type f -exec sed -i 's/Environment Registry/CSIRO Test Registry/g' {} \;
 RUN rm -rf /var/lib/tomcat7/webapps/* 
 RUN chown -R tomcat7 /opt/ldregistry /var/opt/ldregistry /var/log/ldregistry
 RUN cp registry-core-0.0.5.war /var/lib/tomcat7/webapps/ROOT.war
 RUN rm /etc/nginx/sites-available/default 
-RUN rm -f /etc/service/sshd/down
-# Regenerate SSH host keys. baseimage-docker does not contain any, so you
-# have to do that yourself. You may also comment out this instruction; the
-# init system will auto-generate one during boot.
-RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 #supervisord
 RUN apt-get install -y supervisor
